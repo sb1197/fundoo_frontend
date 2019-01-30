@@ -45,7 +45,7 @@ class LoginComponent extends Component
     }
     register = (e) => {
         e.preventDefault();
-        this.props.history.push('/login');
+        this.props.history.push('/registration');
     }
     forgetPass = (e) => {
         e.preventDefault();

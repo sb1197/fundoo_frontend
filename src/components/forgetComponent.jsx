@@ -38,7 +38,6 @@ class ForgotPassComponent extends Component
                 <div>
                     <label><b>Username</b></label>
                     <input type="text" placeholder="Enter useremail" name="username" value={this.state.username} onChange={this.handleusernameChange} style={{marginBottom:"20px"}}/>                     
-                   
                     <div style={{paddingTop:"10px"}}> 
                     <Button style=
                     {{
@@ -53,7 +52,6 @@ class ForgotPassComponent extends Component
                     }} type="submit" onClick={this.handleSubmit}>
                     <b>Send Link</b>
                      </Button>
-                   
                     </div>
                 </div> 
                 <ToastContainer/>                              

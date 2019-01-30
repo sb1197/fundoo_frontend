@@ -18,9 +18,9 @@ function userRegister(fname, lname, username, password)
     })
     .then(function (response) 
     {
-        console.log(response.data.token);
-        alert('Registered Successfully!!');
-        window.location.href = '/login'      
+        console.log("response after register",response); 
+        window.location.href = '/verifyingEmail'
+        // alert('Registered Successfully!!');     
     })
     .catch(function (err) {
         console.log(err);
