@@ -27,6 +27,22 @@ function userRegister(fname, lname, username, password) {
             alert('User with this Username already exists!!');
         });
 }
+
+function checkToken(token) {
+    console.log('63--inside check token---',token);
+    axios.post(`/verifyEmail/${token}`,"",{ headers: {
+        'token': token
+    }})
+        .then(function (response) {
+            alert('User verified successfully');
+            window.location.href = '/login'
+        })
+        .catch(function (err) {
+            console.log(err);
+            alert('User is not verified.. Please verify email!!');
+        });
+}
+
 function userLogin(username, password) {
     axios.post('/login',
         {
@@ -44,35 +60,44 @@ function userLogin(username, password) {
         });
 }
 
-function userNewPassword(username) {
-    axios.post('/newpassword',
-        {
-            email: username,
-        })
-        .then(function (response) {
-            alert('Password changed successfully');
-            window.location.href = '/login'
-        })
-        .catch(function (err) {
-            console.log(err);
-            alert('Password changed Unsuccessful.. Please Try Again!!');
-        });
+function forgetPassword(username) {
+    axios.post('/verifyUser',
+    {
+        'email': username,
+    })
+    .then(function (response) {
+        console.log('53--Inside forgetPassword response is--',response.data);
+        const token1 = response.data;
+        const token2 = token1.substring(34)
+        localStorage.setItem('verifyUserToken', token2);
+        alert('Password change link is send to valid email plz check..')
+    })
+    .catch(function (err) {
+        console.log(err);
+        alert('User Not Found..');
+    });
 }
 
-function checkToken(token) {
-    console.log('63--inside check token---',token);
+
+function resetPassword(password,token) {
+    console.log('83--inside reset paswd password--',password);
+    console.log('84--inside reset paswd token--',token);
     
-    axios.post(`/verifyEmail/${token}`,"",{ headers: {
+    axios.post(`/resetpassword/${token}`,{
+    data : {
+        'password': password,
+    },
+     headers: {
         'token': token
     }})
-        .then(function (response) {
-            alert('User verified successfully');
+    .then(function (response) {
+        alert('Password changed successfully');
             window.location.href = '/login'
-        })
-        .catch(function (err) {
-            console.log(err);
-            alert('User is not verified.. Please verify email!!');
-        });
+    })
+    .catch(function (err) {
+        console.log(err);
+        alert('Password change Unsuccessful.. Please Try Again!!');
+    });
 }
 
-export { userRegister, userLogin, userNewPassword, checkToken }
+export { userRegister, userLogin, forgetPassword, checkToken, resetPassword }

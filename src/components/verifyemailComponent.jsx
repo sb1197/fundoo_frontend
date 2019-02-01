@@ -8,7 +8,6 @@ class VerifyEmailComponent extends Component
         checkToken(verify_token);
     }
     render() {
-
         return (
             <div>
                  <div style={{paddingTop:"10px"}}>

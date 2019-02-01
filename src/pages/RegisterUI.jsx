@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RegisterComponent from "../components/registerComponent";
 class Registration extends Component {
     render() {
+        localStorage.clear();
         return (
             <div className="container">
                 <form>

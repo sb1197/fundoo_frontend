@@ -3,7 +3,7 @@ import {withRouter} from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Button } from "@material-ui/core";
-import { userNewPassword }  from "../services/userService";
+import { forgetPassword }  from "../services/userService";
 class ForgotPassComponent extends Component 
 {
     constructor(props) {
@@ -28,11 +28,13 @@ class ForgotPassComponent extends Component
         }
         else 
         {
-            userNewPassword(this.state.username);
+            // console.log('31--in component--username is:',this.state.username);
+            forgetPassword(this.state.username);
         }
     }
    
     render() {
+    
         return (
             <div>
                 <div>

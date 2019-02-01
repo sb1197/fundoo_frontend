@@ -10,7 +10,6 @@ class EmailVerfication extends Component {
                 <div>
                     <VerifyEmailComponent />
                 </div>
-
             </div>
         );
 

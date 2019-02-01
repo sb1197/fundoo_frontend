@@ -116,11 +116,8 @@ class RegisterComponent extends Component {
                         </table>
                     </div>
                     <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
-                        {/* <button type="submit" className="longButton" onClick={this.handleSubmit}>REGISTER</button> */}
                         <Button id="logoutButton" onClick={this.handleSubmit}>REGISTER</Button>
-                        {/* <button type="submit" className="logoutButton" onClick={this.resetForm}>RESET</button> */}
                         <Button id="logoutButton" onClick={this.resetForm}>RESET</Button>
-
                     </div>
                     <ToastContainer />
                 </div>
