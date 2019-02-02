@@ -35,7 +35,7 @@ function checkToken(token) {
     }})
         .then(function (response) {
             alert('User verified successfully');
-            window.location.href = '/login'
+            // window.location.href = '/login'
         })
         .catch(function (err) {
             console.log(err);
@@ -83,10 +83,7 @@ function resetPassword(password,token) {
     console.log('83--inside reset paswd password--',password);
     console.log('84--inside reset paswd token--',token);
     
-    axios.post(`/resetpassword/${token}`,{
-    data : {
-        'password': password,
-    },
+    axios.post(`/resetpassword/${token}`,{'password': password},{
      headers: {
         'token': token
     }})

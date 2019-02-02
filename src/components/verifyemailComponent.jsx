@@ -4,7 +4,9 @@ import { checkToken } from '../services/userService'
 class VerifyEmailComponent extends Component 
 {
     handleSubmit=()=>{
-        const verify_token = localStorage.getItem('verifyToken');
+        let url = window.location.pathname;
+        const verify_token = url.substr(13)
+        console.log('8--in verify Component Verify token is:--',verify_token);
         checkToken(verify_token);
     }
     render() {

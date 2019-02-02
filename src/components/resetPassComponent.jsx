@@ -53,15 +53,13 @@ class ForgotPassComponent extends Component
     }
    
     render() {
-
         return (
             <div>
                 <div>
                     <label><b>New Password</b></label>
                     <input type="password" placeholder="Enter new password" name="password" value={this.state.password} onChange={this.handlepasswordChange} style={{marginBottom:"20px"}}/>                     
                     <label><b>Confirm New Password</b></label>                    
-                    <input type="password" placeholder="Confirm new password" name="newpassword" value={this.state.newpassword} onChange={this.handlenewpasswordChange} style={{marginBottom:"20px"}}/>                     
-                    
+                    <input type="password" placeholder="Confirm new password" name="newpassword" value={this.state.newpassword} onChange={this.handlenewpasswordChange} style={{marginBottom:"20px"}}/>                      
                     <div style={{paddingTop:"10px"}}> 
                     <Button style=
                     {{
