@@ -56,9 +56,9 @@ class LoginComponent extends Component
             <div>
                 <div>
                     <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter useremail" name="username" value={this.state.username} onChange={this.handleusernameChange} style={{marginBottom:"20px"}}/>                     
+                    <input type="text" id= "username" placeholder="Enter useremail" name="username" value={this.state.username} onChange={this.handleusernameChange} style={{marginBottom:"20px"}}/>                     
                     <label ><b>Password</b></label>
-                    <input type="password" placeholder="Enter password" name="password" value={this.state.password} onChange={this.handlepasswordChange} />                      
+                    <input type="password" id= "password"  placeholder="Enter password" name="password" value={this.state.password} onChange={this.handlepasswordChange} />                      
                     <div style={{paddingTop:"10px"}}>
                     <Button style=
                     {{

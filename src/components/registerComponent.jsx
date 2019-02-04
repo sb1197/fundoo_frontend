@@ -96,22 +96,22 @@ class RegisterComponent extends Component {
                     <div>
                         <table>
                             <tr><td>First Name</td>
-                                <td><input type="text" placeholder=" " name="fname" value={this.state.fname} onChange={this.handlefnameChange} /></td>
+                                <td><input type="text" id = "fname" placeholder=" " name="fname" value={this.state.fname} onChange={this.handlefnameChange} /></td>
                             </tr>
                             <tr><td>Last Name</td>
-                                <td><input type="text" placeholder=" " name="lname" value={this.state.lname} onChange={this.handlelnameChange} /></td>
+                                <td><input type="text" id = "lname" placeholder=" " name="lname" value={this.state.lname} onChange={this.handlelnameChange} /></td>
                             </tr>
                             <tr><td>Email Address</td>
-                                <td><input type="text" placeholder=" " name="username" value={this.state.username} onChange={this.handleusernameChange} /></td>
+                                <td><input type="text" id = "username" placeholder=" " name="username" value={this.state.username} onChange={this.handleusernameChange} /></td>
                             </tr>
                             <tr><td>Confirm Email Address</td>
-                                <td><input type="text" placeholder=" " name="confirmEmail" value={this.state.confirmEmail} onChange={this.handleconfirmEmailChange} /></td>
+                                <td><input type="text" id = "confirmEmail" placeholder=" " name="confirmEmail" value={this.state.confirmEmail} onChange={this.handleconfirmEmailChange} /></td>
                             </tr>
                             <tr><td>Password</td>
-                                <td><input type="password" placeholder=" " name="password" value={this.state.password} onChange={this.handlepasswordChange} /></td>
+                                <td><input type="password"  id = "password" placeholder=" " name="password" value={this.state.password} onChange={this.handlepasswordChange} /></td>
                             </tr>
                             <tr><td>Confirm Password</td>
-                                <td><input type="password" placeholder=" " name="confirmPass" value={this.state.confirmPass} onChange={this.handleconfirmPassChange} /></td>
+                                <td><input type="password" id = "confirmPass" placeholder=" " name="confirmPass" value={this.state.confirmPass} onChange={this.handleconfirmPassChange} /></td>
                             </tr>
                         </table>
                     </div>
