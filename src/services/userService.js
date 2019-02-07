@@ -4,9 +4,9 @@ import axios from 'axios';
  * @param {*} lname Last name
  * @param {*} username User email
  * @param {*} password User password
- * @description: This function pass the user input values fron UI to the server
+ * @description: This function pass the user input values fron UI to the server and 
+ *               save the user details to the database and generate token for confirming useremail
  */
-
 function userRegister(fname, lname, username, password) {
     axios.post('/registration',
         {
@@ -28,6 +28,10 @@ function userRegister(fname, lname, username, password) {
         });
 }
 
+/**
+ * @param {*} token It is the token taken from url when user click on the email verification link
+ * @description This method is to verify user email after registration is done.
+ */
 function checkToken(token) {
     console.log('63--inside check token---',token);
     axios.post(`/verifyEmail/${token}`,"",{ headers: {
@@ -35,7 +39,7 @@ function checkToken(token) {
     }})
         .then(function (response) {
             alert('User verified successfully');
-            // window.location.href = '/login'
+            window.location.href = '/login'
         })
         .catch(function (err) {
             console.log(err);
@@ -43,6 +47,11 @@ function checkToken(token) {
         });
 }
 
+/**
+ * @param {*} username is the user email id
+ * @param {*} password is the password of user for login to the dashboard
+ * @description This method is posted after the user email verification is done
+ */
 function userLogin(username, password) {
     axios.post('/login',
         {
@@ -60,6 +69,11 @@ function userLogin(username, password) {
         });
 }
 
+/**
+ * @param {*} username is the email of user to whom reset password link is to be send
+ * @description This axios is posted to verifyUserEmail to send reset password link 
+ *              to the verified user only
+ */
 function forgetPassword(username) {
     axios.post('/verifyUser',
     {
@@ -78,7 +92,10 @@ function forgetPassword(username) {
     });
 }
 
-
+/**
+ * @param {*} password new password to user account
+ * @param {*} token is token to verify whether verified user has clicked on reset password link or not
+ */
 function resetPassword(password,token) {
     console.log('83--inside reset paswd password--',password);
     console.log('84--inside reset paswd token--',token);
