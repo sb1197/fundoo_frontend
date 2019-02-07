@@ -54,6 +54,7 @@ class LoginComponent extends Component
     render() {
         return (
             <div>
+                <form id = 'loginForm'>
                 <div>
                     <label><b>Username</b></label>
                     <input type="text" id= "username" placeholder="Enter useremail" name="username" value={this.state.username} onChange={this.handleusernameChange} style={{marginBottom:"20px"}}/>                     
@@ -84,7 +85,8 @@ class LoginComponent extends Component
                     </div>
                     </div>
                 </div> 
-                <ToastContainer/>                              
+                <ToastContainer/>    
+                </form>                          
             </div>
         )
     } 

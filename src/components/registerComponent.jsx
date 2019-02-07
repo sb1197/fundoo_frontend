@@ -92,11 +92,11 @@ class RegisterComponent extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div id='regMainDiv'>
                     <div>
                         <table>
                             <tr><td>First Name</td>
-                                <td><input type="text" id = "fname" placeholder=" " name="fname" value={this.state.fname} onChange={this.handlefnameChange} /></td>
+                                <td><input type="text" id = 'fname' placeholder=" " name="fname" value={this.state.fname} onChange={this.handlefnameChange} /></td>
                             </tr>
                             <tr><td>Last Name</td>
                                 <td><input type="text" id = "lname" placeholder=" " name="lname" value={this.state.lname} onChange={this.handlelnameChange} /></td>

@@ -5,7 +5,7 @@ class Registration extends Component {
         localStorage.clear();
         return (
             <div className="container">
-                <form>
+                <form id = 'regForm'>
                     <div style={{paddingLeft: "80px"}}>
                         <h1><b>USER REGISTRATION</b></h1>
                     </div>

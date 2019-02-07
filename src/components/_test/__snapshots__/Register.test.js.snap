@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Register /> UI should match to snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Registration />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <form
+        id="regForm"
+      >
+        <div
+          style={
+            Object {
+              "paddingLeft": "80px",
+            }
+          }
+        >
+          <h1>
+            <b>
+              USER REGISTRATION
+            </b>
+          </h1>
+        </div>
+        <withRouter(RegisterComponent) />
+      </form>,
+      "className": "container",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            style={
+              Object {
+                "paddingLeft": "80px",
+              }
+            }
+          >
+            <h1>
+              <b>
+                USER REGISTRATION
+              </b>
+            </h1>
+          </div>,
+          <withRouter(RegisterComponent) />,
+        ],
+        "id": "regForm",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <h1>
+              <b>
+                USER REGISTRATION
+              </b>
+            </h1>,
+            "style": Object {
+              "paddingLeft": "80px",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <b>
+                USER REGISTRATION
+              </b>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "USER REGISTRATION",
+              },
+              "ref": null,
+              "rendered": "USER REGISTRATION",
+              "type": "b",
+            },
+            "type": "h1",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "form",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <form
+          id="regForm"
+        >
+          <div
+            style={
+              Object {
+                "paddingLeft": "80px",
+              }
+            }
+          >
+            <h1>
+              <b>
+                USER REGISTRATION
+              </b>
+            </h1>
+          </div>
+          <withRouter(RegisterComponent) />
+        </form>,
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              style={
+                Object {
+                  "paddingLeft": "80px",
+                }
+              }
+            >
+              <h1>
+                <b>
+                  USER REGISTRATION
+                </b>
+              </h1>
+            </div>,
+            <withRouter(RegisterComponent) />,
+          ],
+          "id": "regForm",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h1>
+                <b>
+                  USER REGISTRATION
+                </b>
+              </h1>,
+              "style": Object {
+                "paddingLeft": "80px",
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <b>
+                  USER REGISTRATION
+                </b>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "USER REGISTRATION",
+                },
+                "ref": null,
+                "rendered": "USER REGISTRATION",
+                "type": "b",
+              },
+              "type": "h1",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "form",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
