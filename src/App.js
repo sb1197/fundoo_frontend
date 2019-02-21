@@ -16,7 +16,7 @@ class App extends Component {
             <Route path="/login" component={Login}></Route>
             <Route path="/registration" component={Registration}></Route>
             <Route path="/verifyEmail/" component={EmailVerfication}></Route>
-            <Route path="/dashboard" component={Dashboard}></Route>
+             <Route path="/dashboard" component={Dashboard}></Route> 
             <Route path="/forgetPassword" component={ForgotPass}></Route>
             <Route path="/resetPassword" component={ResetPassword}></Route>
           </div>

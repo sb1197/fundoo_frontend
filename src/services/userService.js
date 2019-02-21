@@ -52,7 +52,7 @@ function userLogin(username, password) {
         .then(function (response) {
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('username', username);
-            window.location.href = '/dashboard'
+            window.location.href = 'dashboard'
         })
         .catch(function (err) {
             console.log(err);
