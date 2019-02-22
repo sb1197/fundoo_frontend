@@ -1,21 +1,24 @@
 import React, { Component } from "react";
 import { AppBar, Toolbar, IconButton, InputBase, Tooltip } from '@material-ui/core';
-// import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import ClearIcon from '@material-ui/icons/Close'
 import PersistentDrawerLeft from '../components/sideNavigationBar'
-class DashboardComponent extends Component {
+import SignOut from '../components/signout'
 
+class DashboardComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            open:false
-        };
     }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         open: false
+    //     };
+    // }
 
-    handleToggle=()=>{
-        this.setState(state=>({open:!state.open}));
-    }
+    // handleToggle = () => {
+    //     this.setState(state => ({ open: !state.open }));
+    // }
 
 
     // constructor(props) {
@@ -52,32 +55,28 @@ class DashboardComponent extends Component {
     //     this.setState({render : !this.state.render})
     // }
 
-    // handleDrawerOpen = () => {
-    //     this.setState({ open: true });
-    //   };
-    
+    handleSignout = () => {
+       
+      };
+
     render() {
         return (
             // <MuiThemeProvider theme={theme}>
+            <div style={{ display:"flex"}}>
             <AppBar position="fixed" id="appbar" color="inherit">
                 <div>
                     <Toolbar>
                         <div id="appBarMenuAndTitle">
                             <div id="appBarMenuAndTitle1" >
                                 <div>
-                                    <IconButton color="inherit" aria-label="Open drawer" >
-                                        <PersistentDrawerLeft/>
-                                    </IconButton>
-                                    {/* {sideNavigation} */}
+                                    <PersistentDrawerLeft />
                                 </div>
                                 <div style={{ display: "flex", justifyContent: "space-between" }}>
                                     <div id="keepImage">
                                         <img src={require('/home/bridgeit/Shweta/fundooNotes/frontend/src/assets/images/keep.png')} alt="keep icon" />
-
                                     </div>
                                     <span className="title"><b>fundooNotes</b></span>
                                 </div>
-                                {/* <div id="appBarIcons" style={{ border: "black solid 1px" }}> */}
                                 <div id="searchBar">
                                     <IconButton color="inherit" aria-label="Open drawer" style={{ marginLeft: "8px", float: "left", position: "absolute", top: "0" }} >
                                         <Tooltip title="Search">
@@ -96,7 +95,6 @@ class DashboardComponent extends Component {
                                         </Tooltip>
                                     </IconButton>
                                 </div>
-                                {/* </div> */}
                                 <div style={{ marginLeft: "15px" }}>
                                     <IconButton onClick={this.handleRefresh}>
                                         <Tooltip title="Refresh" >
@@ -106,7 +104,7 @@ class DashboardComponent extends Component {
                                 </div>
                                 <div>
                                     <IconButton>
-                                        <Tooltip title="ListView" >
+                                        <Tooltip title="Grid View" >
                                             <img src={require('/home/bridgeit/Shweta/fundooNotes/frontend/src/assets/images/listView.svg')} alt="refresh icon" />
                                         </Tooltip>
                                     </IconButton>
@@ -122,7 +120,7 @@ class DashboardComponent extends Component {
                                 <div style={{ paddingLeft: "120px", display: "flex" }}>
                                     <div>
                                         <IconButton>
-                                            <Tooltip title="RippleButton" >
+                                            <Tooltip title="Google apps" >
                                                 <img src={require('/home/bridgeit/Shweta/fundooNotes/frontend/src/assets/images/baseline-apps-24px.svg')} alt="refresh icon" />
                                             </Tooltip>
                                         </IconButton>
@@ -136,18 +134,17 @@ class DashboardComponent extends Component {
                                         </IconButton>
                                     </div>
                                     <div>
-                                        <IconButton>
+                                        {/* <IconButton onClick={this.handleSignout()}>
                                             <Tooltip title="Account" style={{ height: "26px", width: "26px" }}>
                                                 <img src={require('/home/bridgeit/Shweta/fundooNotes/frontend/src/assets/images/account.png')} alt="refresh icon" />
                                             </Tooltip>
-                                        </IconButton>
+                                        </IconButton> */}
+                                        <SignOut props1={this.props.props}/>
                                     </div>
                                 </div>
                                 {/* <CardsView appPropstoCardsView={this.handleAppbar} /> */}
-
                             </div>
                         </div>
-
                     </Toolbar>
                 </div>
                 {/* <DrawerMenu
@@ -156,7 +153,8 @@ class DashboardComponent extends Component {
                     searchLabels={(value) => this.searchLabels(value)}
                     makeLabelFalse={this.props.makeLabelFalse} /> */}
             </AppBar>
-            // </MuiThemeProvider>
+            </div>
+            // </MuiThemeProvider>  
         )
     }
 }

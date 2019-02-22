@@ -8,6 +8,9 @@ class Dashboard extends Component {
     //     localStorage.clear();
     //     this.props.history.push('/login');
     // }
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div>
@@ -16,7 +19,7 @@ class Dashboard extends Component {
                     <Button id="logoutButton" onClick={this.logout}>SIGN OUT</Button>
                 </div>  */}
                  <div>
-                    <DashboardComponent />
+                    <DashboardComponent props={this.props} />
                 </div> 
             </div>
         );

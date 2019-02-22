@@ -1,41 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-//import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+// import NotesIcon from '@material-ui/icons/lightbulb_outline';
 import MailIcon from '@material-ui/icons/Mail';
-
-const drawerWidth = 240;
+import { IconButton, Tooltip } from '@material-ui/core';
 
 const styles = theme => ({
   root: {
     display: 'flex',
   },
- 
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
-  },
   hide: {
     display: 'none',
   },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
   drawerPaper: {
-    width: drawerWidth,
+    width: "240px",
+    top: "65px"
   },
   drawerHeader: {
     display: 'flex',
@@ -44,23 +30,14 @@ const styles = theme => ({
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
   },
-
 });
 
 class PersistentDrawerLeft extends React.Component {
   state = {
     open: false,
   };
-
-//   handleDrawerOpen = () => {
-//     this.setState({ open: true });
-//   };
-
-//   handleDrawerClose = () => {
-//     this.setState({ open: false });
-//   };
-  handleToggle=()=>{
-      this.setState(state=>({open:!state.open}));
+  handleToggle = () => {
+    this.setState(state => ({ open: !state.open }));
   };
 
   render() {
@@ -69,17 +46,15 @@ class PersistentDrawerLeft extends React.Component {
 
     return (
       <div className={classes.root}>
-       
-          
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleToggle}
-              className={classNames(classes.menuButton)}
-            >
-              <MenuIcon />
-            </IconButton>
-          
+        <IconButton
+          color="inherit"
+          aria-label="Open drawer"
+          onClick={this.handleToggle}
+        >
+          <Tooltip title="Menu">
+            <MenuIcon />
+          </Tooltip>
+        </IconButton>
         <Drawer
           className={classes.drawer}
           variant="persistent"
@@ -89,31 +64,39 @@ class PersistentDrawerLeft extends React.Component {
             paper: classes.drawerPaper,
           }}
         >
-          <div className={classes.drawerHeader}>
+          {/* <div className={classes.drawerHeader}>
             <IconButton onClick={this.handleDrawerClose}>
               {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
             </IconButton>
-          </div>
-          <Divider />
+          </div>*/}
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Notes', 'Reminders'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <img src={require('../assets/images/bulb.svg')} /> : <img src={require('../assets/images/reminders.svg')} />}</ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+          <Divider /> 
+          <List>
+            {['Edit Labels'].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>{index % 2 === 0 ? <img src={require('../assets/images/editLabel.svg')} /> : ""}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
           </List>
           <Divider />
           <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
+            {['Archive', 'Trash'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <img src={require('../assets/images/archive.svg')} /> : <img src={require('../assets/images/trash.svg')} />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
           </List>
         </Drawer>
-     
+
       </div>
     );
   }
