@@ -61,7 +61,7 @@ function userLogin(username, password) {
         .then(function (response) {
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('username', username);
-            window.location.href = '/dashboard'
+            window.location.href = 'dashboard'
         })
         .catch(function (err) {
             console.log(err);
@@ -80,10 +80,10 @@ function forgetPassword(username) {
         'email': username,
     })
     .then(function (response) {
-        console.log('53--Inside forgetPassword response is--',response.data);
-        const token1 = response.data;
-        const token2 = token1.substring(34)
-        localStorage.setItem('verifyUserToken', token2);
+        // console.log('53--Inside forgetPassword response is--',response.data);
+        // const token1 = response.data;
+        // const token2 = token1.substring(34)
+        // localStorage.setItem('verifyUserToken', token2);
         alert('Password change link is send to valid email plz check..')
     })
     .catch(function (err) {

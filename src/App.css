@@ -128,8 +128,7 @@ button:hover {
 }
 
 .div{
-
-  width: 80%;
+width: 80%;
 padding: 12px 20px;
 padding-left: 20px;
 margin: 8px 0;
@@ -137,4 +136,97 @@ display: inline-block;
 border: 1px solid #ccc;
 box-sizing: border-box;
 padding-left: 1px;
+}
+
+
+#appbar {
+  background-color: white;
+  box-shadow: 0 0;
+  border-bottom: 1px solid lightgray;
+  }
+  #appBarMenuAndTitle {
+  display: flex;
+  line-height: 1;
+  /* justify-content: space-between */
+  /* padding-top: 7px; */
+  }
+  #appBarMenuAndTitle1 {
+    display: flex;
+    /* border: blue solid 1px; */
+    height: 50px; 
+    margin: -20px;
+    }
+  #menu {
+  color: gray
+  }
+  .title {
+  margin-left: 30px;
+  margin-right: 38px;
+  padding-top: 15px;
+  color: gray;
+  line-height: 1;
+  font-size: larger;
+  }
+  #appBarIcons {
+  display: flex;
+  line-height: 3
+  }
+  #searchBar {
+  background-color: none;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0);
+  width: 600px;
+  display: flex;
+  position: relative;
+  }
+  #searchInputBase {
+  width: 550px;
+  padding: 0px 0px 0px 70px;
+  display: flex;
+  outline: none;
+  background: transparent;
+  height: 40px;
+  border:none;
+  box-sizing: border-box;
+  }
+
+  #keepImage {
+    display: flex;
+    width: 25px;
+    height: 40px;
+    padding-top: 5px;
+  }
+  
+#signOutMenuItem {
+  border:black solid 1px;
+  background-color: rgba(0,0,0,.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 2px 10px 1px 12px;
+  height: 20px;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07)
+}
+
+#signOutMenu {
+  display: flex; 
+  padding: 4px;
+  height: 50px;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,.2);
+}
+
+#accountCircle {
+  width: 140px; 
+  height: 110px; 
+  margin: 10px 0px
+}
+
+#PaperDiv1 {
+  height: 140px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: rgba(0,0,0,.2);
+  display: flex
 }
