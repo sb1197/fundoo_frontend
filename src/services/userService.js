@@ -8,7 +8,7 @@ import axios from 'axios';
  *               save the user details to the database and generate token for confirming useremail
  */
 function userRegister(fname, lname, username, password) {
-    axios.post('/registration',
+    axios.post('http://localhost:3001/registration',
         {
             firstName: fname,
             lastName: lname,
@@ -34,7 +34,7 @@ function userRegister(fname, lname, username, password) {
  */
 function checkToken(token) {
     console.log('63--inside check token---',token);
-    axios.post(`/verifyEmail/${token}`,"",{ headers: {
+    axios.post(`http://localhost:3001/verifyEmail/${token}`,"",{ headers: {
         'token': token
     }})
         .then(function (response) {
@@ -53,7 +53,7 @@ function checkToken(token) {
  * @description This method is posted after the user email verification is done
  */
 function userLogin(username, password) {
-    axios.post('/login',
+    axios.post('http://localhost:3001/login',
         {
             email: username,
             password: password
@@ -75,7 +75,7 @@ function userLogin(username, password) {
  *              to the verified user only
  */
 function forgetPassword(username) {
-    axios.post('/verifyUser',
+    axios.post('http://localhost:3001/verifyUser',
     {
         'email': username,
     })
@@ -100,7 +100,7 @@ function resetPassword(password,token) {
     console.log('83--inside reset paswd password--',password);
     console.log('84--inside reset paswd token--',token);
     
-    axios.post(`/resetpassword/${token}`,{'password': password},{
+    axios.post(`http://localhost:3001/resetpassword/${token}`,{'password': password},{
      headers: {
         'token': token
     }})
