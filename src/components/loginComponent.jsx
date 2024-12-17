@@ -3,7 +3,7 @@ import {withRouter} from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Button } from "@material-ui/core";
-import { userLogin }  from "../services/userService";
+// import { userLogin }  from "../services/userService";
 class LoginComponent extends Component 
 {
     constructor(props) {
@@ -38,7 +38,7 @@ class LoginComponent extends Component
         }
         else 
         {
-            userLogin(this.state.username, this.state.password);
+            // userLogin(this.state.username, this.state.password);
             this.setState({username:''})
             this.setState({password:''})
         }

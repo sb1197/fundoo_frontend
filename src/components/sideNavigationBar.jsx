@@ -13,9 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import TrashIcon from '@material-ui/icons/DeleteOutlineOutlined';
 import NotificationIcon from "@material-ui/icons/NotificationsNone";
-import LabelIcon from '@material-ui/icons/LabelOutlined';
 import ArchiveIcon from '@material-ui/icons/ArchiveOutlined';
-
 import { IconButton, Tooltip } from '@material-ui/core';
 
 const styles = theme => ({
@@ -47,7 +45,7 @@ class PersistentDrawerLeft extends React.Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes } = this.props;
     const { open } = this.state;
 
     return (
