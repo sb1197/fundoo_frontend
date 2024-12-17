@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <Router>
           <div className="App">
-            <Route path="/login" component={Login}></Route>
+            <Route path="/" component={Login}></Route>
             <Route path="/registration" component={Registration}></Route>
             <Route path="/verifyEmail/" component={EmailVerfication}></Route>
              <Route path="/dashboard" component={Dashboard}></Route> 

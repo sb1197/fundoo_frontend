@@ -16,7 +16,6 @@ function userRegister(fname, lname, username, password) {
             password: password
         })
         .then(function (response) {
-            // console.log("response after register", response.data);
             const token1 = response.data;
             const token2 = token1.substring(34)
             localStorage.setItem('verifyToken', token2);
@@ -96,10 +95,7 @@ function forgetPassword(username) {
  * @param {*} password new password to user account
  * @param {*} token is token to verify whether verified user has clicked on reset password link or not
  */
-function resetPassword(password,token) {
-    console.log('83--inside reset paswd password--',password);
-    console.log('84--inside reset paswd token--',token);
-    
+function resetPassword(password,token) {    
     axios.post(`http://localhost:3001/resetpassword/${token}`,{'password': password},{
      headers: {
         'token': token

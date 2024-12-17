@@ -5,7 +5,7 @@ import {
   IconButton,
   InputBase,
   Tooltip,
-  Icon
+  Icon,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import ClearIcon from "@material-ui/icons/Close";
@@ -17,6 +17,7 @@ import AppsIcon from "@material-ui/icons/AppsRounded";
 
 import PersistentDrawerLeft from "../components/sideNavigationBar";
 import SignOut from "../components/signout";
+// import CardsView from "../components/"
 
 class DashboardComponent extends Component {
   constructor(props) {
@@ -85,7 +86,10 @@ class DashboardComponent extends Component {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <div id="keepImage">
-                      <img src={require("../assets/images/keep.png")} alt="keep icon" />
+                      <img
+                        src={require("../assets/images/keep.png")}
+                        alt="keep icon"
+                      />
                     </div>
                     <span className="title">
                       <b>fundooNotes</b>
@@ -167,11 +171,6 @@ class DashboardComponent extends Component {
                       </IconButton>
                     </div>
                     <div>
-                      {/* <IconButton onClick={this.handleSignout()}>
-                                            <Tooltip title="Account" style={{ height: "26px", width: "26px" }}>
-                                                <img src={require('../assets/images/account.png')} alt="refresh icon" />
-                                            </Tooltip>
-                                        </IconButton> */}
                       <SignOut props1={this.props.props} />
                     </div>
                   </div>
@@ -181,10 +180,11 @@ class DashboardComponent extends Component {
             </Toolbar>
           </div>
           {/* <DrawerMenu
-                    appBarProps={this.state.open}
-                    handleNavigation={this.props.handleNavigation}
-                    searchLabels={(value) => this.searchLabels(value)}
-                    makeLabelFalse={this.props.makeLabelFalse} /> */}
+            appBarProps={this.state.open}
+            handleNavigation={this.props.handleNavigation}
+            searchLabels={(value) => this.searchLabels(value)}
+            makeLabelFalse={this.props.makeLabelFalse}
+          /> */}
         </AppBar>
       </div>
       // </MuiThemeProvider>
