@@ -16,7 +16,6 @@ function userRegister(fname, lname, username, password) {
             password: password
         })
         .then(function (response) {
-            // console.log("response after register", response.data);
             const token1 = response.data;
             const token2 = token1.substring(34)
             localStorage.setItem('verifyToken', token2);
