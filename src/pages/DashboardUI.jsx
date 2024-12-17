@@ -8,9 +8,7 @@ class Dashboard extends Component {
     //     localStorage.clear();
     //     this.props.history.push('/login');
     // }
-    constructor(props) {
-        super(props);
-    }
+
     render() {
         return (
             <div>

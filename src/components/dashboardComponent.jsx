@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import ClearIcon from "@material-ui/icons/Close";
-import RefreshIcon from "@material-ui/icons/Refresh";
+import AppsIcon from "@material-ui/icons/Apps";
 
 import GridOnIcon from "@material-ui/icons/GridOnOutlined";
 import SettingsIcon from "@material-ui/icons/SettingsOutlined";
@@ -17,22 +17,12 @@ import AppsIcon from "@material-ui/icons/AppsRounded";
 
 import PersistentDrawerLeft from "../components/sideNavigationBar";
 import SignOut from "../components/signout";
-// import CardsView from "../components/"
+import RefreshIcon from "@material-ui/icons/Refresh";
+
+import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 class DashboardComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
-  // constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //         open: false
-  //     };
-  // }
-
-  // handleToggle = () => {
-  //     this.setState(state => ({ open: !state.open }));
-  // }
 
   // constructor(props) {
   //     super(props);
@@ -60,8 +50,7 @@ class DashboardComponent extends Component {
   // searchLabels(value) {
   //     this.props.searchLabels(value)
   // }
-  // handleRefresh(evt) {
-  //     evt.preventDefault();
+  // handleRefresh()
   //     window.location.reload();
   // }
   // NavBar() {
@@ -163,10 +152,7 @@ class DashboardComponent extends Component {
                           title="Notifications"
                           style={{ width: "25px" }}
                         >
-                          <img
-                            src={require("../assets/images/notify.jpg")}
-                            alt="refresh icon"
-                          />
+                          <NotificationsNoneOutlinedIcon />
                         </Tooltip>
                       </IconButton>
                     </div>

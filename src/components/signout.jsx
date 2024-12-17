@@ -18,9 +18,7 @@ class SignOut extends React.Component {
     state = {
         open: false,
     };
-    constructor(props) {
-        super(props);
-    }
+
     handleToggle = () => {
         this.setState(state => ({ open: !state.open }));
     };
