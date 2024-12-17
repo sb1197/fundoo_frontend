@@ -1,0 +1,103 @@
+.appbar {
+  background-color: white;
+  box-shadow: none !important;
+  border-bottom: 1px solid lightgray;
+  height: 65px;
+  display: flex;
+}
+
+.toolbar {
+  width: 100%;
+  padding: 0 !important;
+}
+
+#appBarMenuAndTitle1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+
+#menu {
+  color: gray;
+}
+
+.title {
+  color: gray;
+  font-size: larger;
+  padding-right: 50px;
+}
+
+#appBarIcons {
+  display: flex;
+  line-height: 3;
+}
+
+#searchBar {
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 600px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  position: relative;
+}
+
+#searchBar > div {
+  width: 100%;
+}
+
+#searchInputBase {
+  padding-left: 60px;
+  display: flex;
+  outline: none;
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+}
+
+#keepImage {
+  display: flex;
+  height: 40px;
+  padding-right: 8px;
+}
+
+#signOutMenuItem {
+  border: black solid 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  border: solid transparent;
+  border-radius: 8px;
+  border-width: 2px 10px 1px 12px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+#signOutMenu {
+  display: flex;
+  padding: 4px;
+  height: 50px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#accountCircle {
+  width: 140px;
+  height: 110px;
+  margin: 10px 0px;
+}
+
+.header-controls {
+  margin-left: 110px;
+  display: flex;
+}
+
+.search-button {
+  position: absolute;
+  padding: 8px;
+}
+
+.control-icon {
+  color: gray;
+}

@@ -18,9 +18,7 @@ class SignOut extends React.Component {
     state = {
         open: false,
     };
-    constructor(props) {
-        super(props);
-    }
+
     handleToggle = () => {
         this.setState(state => ({ open: !state.open }));
     };
@@ -40,18 +38,18 @@ class SignOut extends React.Component {
     render() {
         const { classes } = this.props;
         const { open } = this.state;
+        let userName = "Shweta Bochare";
 
         return (
             <div className={classes.root}>
                 <div>
-                    <IconButton buttonRef={node => {
+                    <IconButton ref={node => {
                         this.anchorEl = node;
                     }}
                         aria-owns={open ? 'menu-list-grow' : undefined}
                         aria-haspopup="true"
                         onClick={this.handleToggle}>
                         <Tooltip title="Account" style={{ height: "26px", width: "26px" }}>
-                            {/* <img src={require('/home/bridgeit/Shweta/fundooNotes/frontend/src/assets/images/account.png')} alt="refresh icon" /> */}
                             <AccountCircle />
                         </Tooltip>
                     </IconButton>
@@ -68,7 +66,7 @@ class SignOut extends React.Component {
                                             <AccountCircle id="accountCircle" />
                                         </div>
                                         <div style={{ padding: "30px" }}>
-                                            <label>Shweta Bochare</label>
+                                            <label>{userName}</label>
                                         </div>
                                     </div>
                                     <div id="signOutMenu">
